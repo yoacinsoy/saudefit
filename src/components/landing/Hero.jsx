@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 
 const HERO_IMG = 'https://media.base44.com/images/public/6a4ea92b109c6fb971d96f25/344513db5_generated_ae33d918.png';
 
@@ -20,20 +21,20 @@ export default function Hero() {
         <section
             id="hero"
             ref={ref}
-            className="relative h-screen min-h-[700px] w-full overflow-hidden bg-void noise-overlay"
+            className="relative h-screen min-h-175 w-full overflow-hidden bg-void noise-overlay"
         >
             {/* Background image with parallax */}
             <motion.div
                 className="absolute inset-0 z-0"
                 style={{ y: imgY, scale: 1.1 }}
             >
-                <img
+                {/* <Image
                     src={HERO_IMG}
                     alt="Atleta em pico de esforço"
-                    className="w-full h-full object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-void via-void/60 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-void/40" />
+                    className="w-full h-full object-contain object-center"
+                /> */}
+                <div className="absolute inset-0 bg-linear-to-r from-void via-void/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-void via-transparent to-void/40" />
             </motion.div>
 
             {/* Grid pattern */}
@@ -139,7 +140,7 @@ export default function Hero() {
                     SCROLL
                 </span>
                 <motion.div
-                    className="w-px h-12 bg-gradient-to-b from-velocity to-transparent"
+                    className="w-px h-12 bg-linear-to-b from-velocity to-transparent"
                     animate={{ scaleY: [0, 1, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                     style={{ transformOrigin: 'top' }}
