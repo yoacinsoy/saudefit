@@ -95,7 +95,7 @@ export default function Hero() {
                         >
                             <span className="relative z-10">AGENDAR AULA EXPERIMENTAL</span>
                             <span className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                            <span className="absolute inset-0 z-10 flex items-center justify-center text-void translate-y-full group-hover:translate-y-0 transition-transform duration-300 font-heading font-bold tracking-wider text-sm">
+                            <span className="absolute inset-0 z-10 flex items-center justify-center text-void translate-y-full group-hover:translate-y-0 hover:text-zinc-900 transition-transform duration-300 font-heading font-bold tracking-wider text-sm">
                                 COMEÇAR AGORA
                             </span>
                         </a>
